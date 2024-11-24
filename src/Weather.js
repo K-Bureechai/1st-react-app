@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 
-
 export default function Weather(props) {
   function handleResponse(response) {
     alert(`It is ${response.data.main.temp} degree in ${props.city}`);
@@ -14,7 +13,7 @@ export default function Weather(props) {
   axios.get(apiUrl).then(handleResponse);
   return (
     <ClipLoader
-      color="#000000"
+      color="blue"
       size={150}
       aria-label="Loading Spinner"
       data-testid="loader"
